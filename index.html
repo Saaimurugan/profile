@@ -45,6 +45,59 @@
             text-decoration: none;
             color: #0066cc;
         }
+
+.wrapper{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+a{
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #333;
+  border: 2px solid #333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+}
+
+a span{
+  position: relative;
+  z-index: 2;
+}
+
+a:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #ff003b;
+  transition: all .35s;
+}
+
+a:hover{
+  color: #fff;
+}
+
+a:hover:after{
+  width: 100%;
+}
+
+
+
+
+
+        
 .button-28 {
   appearance: none;
   background-color: transparent;
@@ -104,9 +157,11 @@
         <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/saaimurugan" target="_blank">linkedin.com/in/saaimurugan</a></p>
         <p><strong>Location:</strong> Chennai, India</p>
     </div>
-    
+    <div class="wrapper">
+          <a href="#"><span>Hover Me!</span></a>
+    </div>
     <!-- YouTube button below the photo -->
-    <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" target="_blank" class="button-28">Self-Introduction</a>
+    <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" target="_blank" class="button-28"><span>Self-Introduction</span></a>
     
     <div class="section">
         <h2>About Me</h2>
